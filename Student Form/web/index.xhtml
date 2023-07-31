@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Student Registration Form</title>
+        <style>
+            
+            #header1{
+                display: flex;
+                justify-content: center;
+                border-radius: 10px;
+                margin-bottom: 1em;
+            }
+            .field{
+                margin: 5px;
+            }
+             .ui-panelgrid.showcase-text-align-center .ui-grid-responsive .ui-panelgrid-cell {
+        text-align: center;
+    }
+
+    .customPanelGrid .ui-panelgrid-content {
+        align-items: center;
+    }
+        </style>
+    </h:head>
+    <h:body>
+        <div style="background-color: lightgreen" id="header1"><h1>Student Registration Form</h1></div>
+      <h:form id="form">
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true"/>
+
+    <div class="card">
+       
+        <p:accordionPanel widgetVar="basic">
+            <p:tab title="Personal Information">
+                 <div class="field">
+        <p:outputLabel for="name1" styleClass="block">First Name : </p:outputLabel>
+        <p:inputText id="name1" styleClass="block" placeholder="First Name"/>
+                </div>
+                <div class="field">
+        <p:outputLabel for="name2" styleClass="block">Last Name : </p:outputLabel>
+        <p:inputText id="name2" styleClass="block" placeholder="Surname"/>
+                </div>
+                <div class="field">
+        <p:outputLabel for="dob1" styleClass="block">DOB :      </p:outputLabel>
+        <p:inputText id="dob1" styleClass="block" placeholder="01/01/2001"/>
+                </div>
+                <div class="field">
+        <p:outputLabel for="email1" styleClass="block">Email :     </p:outputLabel>
+        <p:inputText id="email1" styleClass="block" placeholder="xyz@gmail.com"/>
+                </div>
+                <div class="field">
+        <p:outputLabel for="mobile1" styleClass="block">Mobile :    </p:outputLabel>
+        <p:inputText id="mobile1" styleClass="block" placeholder="1010101010"/>
+                </div>
+            </p:tab>
+            <p:tab title="Address Information">
+                <div class="field">
+        <p:outputLabel for="address1" styleClass="block">Address :    </p:outputLabel>
+        <p:inputText id="address1" styleClass="block" />
+                </div>
+                <div class="field">
+        <p:outputLabel for="city1" styleClass="block">City :    </p:outputLabel>
+        <p:inputText id="city1" styleClass="block" />
+                </div>
+                <div class="field">
+        <p:outputLabel for="state1" styleClass="block">State :    </p:outputLabel>
+        <p:inputText id="state1" styleClass="block" />
+                </div>
+                <div class="field">
+        <p:outputLabel for="zip1" styleClass="block">Zip :    </p:outputLabel>
+        <p:inputText id="zip1" styleClass="block" />
+                </div>
+            </p:tab>
+            <p:tab title="Education Information">
+                <p:panelGrid columns="1">
+               <div class="field">
+        <p:outputLabel for="admissionno1" styleClass="block">Admission No :    </p:outputLabel>
+        <p:inputText id="admissionno1" styleClass="block" placeholder="123456"/>
+                </div>
+                <div class="field">
+        <p:outputLabel for="course1" styleClass="block">Course :    </p:outputLabel>
+        <p:inputText id="course1" styleClass="block" placeholder="B.Tech/MCA"/>
+                </div>
+                 <div class="field col-12 md:col-4">
+                <p:outputLabel for="@next" value="Course Department : "/>
+                <p:selectOneMenu id="option" value="">
+                    <f:selectItem itemLabel="Select One" itemValue=""/>
+                    <f:selectItem itemLabel="CSE" itemValue="Option1"/>
+                    <f:selectItem itemLabel="IT" itemValue="Option2"/>
+                    <f:selectItem itemLabel="ME" itemValue="Option3"/>
+                    <f:facet name="footer">
+                        
+                        <h:outputText value="3 options" style="font-weight:bold;"/>
+                    </f:facet>
+                </p:selectOneMenu>
+            </div>
+                    </p:panelGrid>
+            </p:tab>
+            <p:tab title="Clubs">
+                
+                <p:tabView style="margin: 10px"></p:tabView>
+                <p:button style="margin: 10px" value="Primary" styleClass="rounded-button" />
+                <p:button style="margin: 10px" value="Success" styleClass="rounded-button ui-button-secondary" />
+                <p:button style="margin: 10px" value="Danger" styleClass="rounded-button ui-button-danger" />
+            </p:tab>
+        </p:accordionPanel>
+    </div>
+      </h:form>
+    </h:body>
+</html>
+
