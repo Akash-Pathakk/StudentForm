@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1 Aug, 2023 10:22:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Studenttb" table="studenttb" catalog="studentdb" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="sfname" type="string">
+            <column name="sfname" length="45" not-null="true" />
+        </property>
+        <property name="slname" type="string">
+            <column name="slname" length="45" not-null="true" />
+        </property>
+        <property name="sdob" type="string">
+            <column name="sdob" length="45" not-null="true" />
+        </property>
+        <property name="semail" type="string">
+            <column name="semail" length="145" not-null="true" />
+        </property>
+        <property name="smobile" type="int">
+            <column name="smobile" not-null="true" />
+        </property>
+        <property name="saddress" type="string">
+            <column name="saddress" not-null="true" />
+        </property>
+        <property name="scity" type="string">
+            <column name="scity" length="45" not-null="true" />
+        </property>
+        <property name="sstate" type="string">
+            <column name="sstate" length="45" not-null="true" />
+        </property>
+        <property name="szip" type="int">
+            <column name="szip" not-null="true" />
+        </property>
+        <property name="sadmissionno" type="string">
+            <column name="sadmissionno" length="11" not-null="true" />
+        </property>
+        <property name="scourse" type="string">
+            <column name="scourse" length="45" not-null="true" />
+        </property>
+        <property name="scoursedepartment" type="string">
+            <column name="scoursedepartment" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
